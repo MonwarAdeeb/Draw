@@ -30,3 +30,22 @@ except ImportError:
         b=b + b'~' * padding
         out=[]
         packI=struct.Struct('!I').pack
+
+        for i in range(0, len(b), 5):
+            chunk=b[i:i + 5]
+            acc=0
+            try:
+                for c in iterbytes(chunk):
+                    acc=acc * 85 + _b85dec[c]
+            except TypeError:
+                for j, c in enumerate(iterbytes(chunk)):
+                    if _b85dec[c] is None:
+                        raise ValueError(
+                            'bad base85 character at position %d' % (i + j)
+                        )
+                raise
+            try:
+                out.append(packI(acc))
+            except struct.error:
+                raise ValueError('base85 overflow in hunk starting at byte %d'
+                                 % i)
