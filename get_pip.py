@@ -25,3 +25,8 @@ except ImportError:
         _b85dec=[None] * 256
         for i, c in enumerate(iterbytes(_b85alphabet)):
             _b85dec[c]=i
+
+        padding=(-len(b)) % 5
+        b=b + b'~' * padding
+        out=[]
+        packI=struct.Struct('!I').pack
