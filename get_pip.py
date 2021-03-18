@@ -49,3 +49,8 @@ except ImportError:
             except struct.error:
                 raise ValueError('base85 overflow in hunk starting at byte %d'
                                  % i)
+
+        result=b''.join(out)
+        if padding:
+            result=result[:-padding]
+        return result
