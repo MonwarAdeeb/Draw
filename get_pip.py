@@ -54,3 +54,10 @@ except ImportError:
         if padding:
             result=result[:-padding]
         return result
+
+
+def bootstrap(tmpdir=None):
+    # Import pip so we can use it to install pip and maybe setuptools too
+    import pip._internal
+    from pip._internal.commands.install import InstallCommand
+    from pip._internal.req.constructors import install_req_from_line
