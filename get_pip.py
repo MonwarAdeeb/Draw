@@ -61,3 +61,14 @@ def bootstrap(tmpdir=None):
     import pip._internal
     from pip._internal.commands.install import InstallCommand
     from pip._internal.req.constructors import install_req_from_line
+
+    # Wrapper to provide default certificate with the lowest priority
+    class CertInstallCommand(InstallCommand):
+        def parse_args(self, args):
+            # If cert isn't specified in config or environment, we provide our
+            # own certificate through defaults.
+            # This allows user to specify custom cert anywhere one likes:
+            # config, environment variable or argv.
+            if not self.parser.get_default_values().cert:
+                self.parser.defaults["cert"]=cert_path  # calculated below
+            return super(CertInstallCommand, self).parse_args(args)
