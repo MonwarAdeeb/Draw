@@ -72,3 +72,9 @@ def bootstrap(tmpdir=None):
             if not self.parser.get_default_values().cert:
                 self.parser.defaults["cert"]=cert_path  # calculated below
             return super(CertInstallCommand, self).parse_args(args)
+
+    pip._internal.commands_dict["install"]=CertInstallCommand
+
+    implicit_pip=True
+    implicit_setuptools=True
+    implicit_wheel=True
