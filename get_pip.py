@@ -78,3 +78,10 @@ def bootstrap(tmpdir=None):
     implicit_pip=True
     implicit_setuptools=True
     implicit_wheel=True
+
+    # Check if the user has requested us not to install setuptools
+    if "--no-setuptools" in sys.argv or os.environ.get("PIP_NO_SETUPTOOLS"):
+        args=[x for x in sys.argv[1:] if x != "--no-setuptools"]
+        implicit_setuptools=False
+    else:
+        args=sys.argv[1:]
