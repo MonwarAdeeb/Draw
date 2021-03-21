@@ -85,3 +85,8 @@ def bootstrap(tmpdir=None):
         implicit_setuptools=False
     else:
         args=sys.argv[1:]
+
+    # Check if the user has requested us not to install wheel
+    if "--no-wheel" in args or os.environ.get("PIP_NO_WHEEL"):
+        args=[x for x in args if x != "--no-wheel"]
+        implicit_wheel=False
