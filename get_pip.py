@@ -90,3 +90,12 @@ def bootstrap(tmpdir=None):
     if "--no-wheel" in args or os.environ.get("PIP_NO_WHEEL"):
         args=[x for x in args if x != "--no-wheel"]
         implicit_wheel=False
+
+    # We only want to implicitly install setuptools and wheel if they don't
+    # already exist on the target platform.
+    if implicit_setuptools:
+        try:
+            import setuptools  # noqa
+            implicit_setuptools=False
+        except ImportError:
+            pass
