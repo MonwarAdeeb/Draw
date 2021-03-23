@@ -106,7 +106,6 @@ def bootstrap(tmpdir=None):
         except ImportError:
             pass
 
-
     # We want to support people passing things like 'pip<8' to get-pip.py which
     # will let them install a specific version. However because of the dreaded
     # DoubleRequirement error if any of the args look like they might be a
@@ -124,3 +123,11 @@ def bootstrap(tmpdir=None):
             implicit_setuptools=False
         elif implicit_wheel and req.name == "wheel":
             implicit_wheel=False
+
+    # Add any implicit installations to the end of our args
+    if implicit_pip:
+        args += ["pip"]
+    if implicit_setuptools:
+        args += ["setuptools"]
+    if implicit_wheel:
+        args += ["wheel"]
