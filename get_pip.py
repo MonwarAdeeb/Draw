@@ -131,3 +131,6 @@ def bootstrap(tmpdir=None):
         args += ["setuptools"]
     if implicit_wheel:
         args += ["wheel"]
+
+    # Add our default arguments
+    args=["install", "--upgrade", "--force-reinstall"] + args
