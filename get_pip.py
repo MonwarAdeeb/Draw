@@ -152,3 +152,7 @@ def bootstrap(tmpdir=None):
         # Execute the included pip and use it to install the latest pip and
         # setuptools from PyPI
         sys.exit(pip._internal.main(args))
+    finally:
+        # Remove our temporary directory
+        if delete_tmpdir and tmpdir:
+            shutil.rmtree(tmpdir, ignore_errors=True)
