@@ -134,3 +134,21 @@ def bootstrap(tmpdir=None):
 
     # Add our default arguments
     args=["install", "--upgrade", "--force-reinstall"] + args
+
+    delete_tmpdir=False
+    try:
+        # Create a temporary directory to act as a working directory if we were
+        # not given one.
+        if tmpdir is None:
+            tmpdir=tempfile.mkdtemp()
+            delete_tmpdir=True
+
+        # We need to extract the SSL certificates from requests so that they
+        # can be passed to --cert
+        cert_path=os.path.join(tmpdir, "cacert.pem")
+        with open(cert_path, "wb") as cert:
+            cert.write(pkgutil.get_data("pip._vendor.certifi", "cacert.pem"))
+
+        # Execute the included pip and use it to install the latest pip and
+        # setuptools from PyPI
+        sys.exit(pip._internal.main(args))
