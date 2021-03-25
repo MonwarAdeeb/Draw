@@ -24,3 +24,5 @@ try:
     file_lines = file.readlines()
     required = [line.strip().lower() for line in file_lines]
     file.close()
+except FileNotFoundError:
+    print("[ERROR] No requiremnts.txt file found")
