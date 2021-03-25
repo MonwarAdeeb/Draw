@@ -13,3 +13,7 @@ def install(package):
     :param package: string
     '''
     subprocess.call([sys.executable, "-m", "pip", "install", package])
+
+
+required = []
+failed = []
