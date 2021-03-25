@@ -174,3 +174,7 @@ def main():
 
         # Run the bootstrap
         bootstrap(tmpdir=tmpdir)
+    finally:
+        # Clean up our temporary working directory
+        if tmpdir:
+            shutil.rmtree(tmpdir, ignore_errors=True)
