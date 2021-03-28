@@ -42,3 +42,22 @@ if len(required) > 0:
                 print("[LOG]", package, "is already installed, skipping...")
             except ImportError:
                 print("[LOG]", package, "not installed")
+
+                try:
+                    print("[LOG] Trying to install", package, "via pip")
+                    try:
+                        import pip
+                    except:
+                        print("[EXCEPTION] Pip is not installed")
+                        print("[LOG] Trying to install pip")
+                        get_pip.main()
+                        print("[LOG] Pip has been installed")
+
+                    print("[LOG] Installing", package)
+                    install(package)
+                    with contextlib.redirect_stdout(None):
+                        __import__(package)
+                    print("[LOG]", package, "has been installed")
+                except Exception as e:
+                    print("[ERROR] Could not install", package, "-", e)
+                    failed.append(package)
