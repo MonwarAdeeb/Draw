@@ -66,3 +66,12 @@ if len(required) > 0:
         print("[STOP] Operation terminated by user")
 else:
     print("[LOG] No packages to install")
+
+if len(failed) > 0:
+    print("[FAILED]", len(failed),
+          "package(s) were not installed. Failed package install(s):", end=" ")
+    for x, package in enumerate(failed):
+        if x != len(failed) - 1:
+            print(package, end=",")
+        else:
+            print(package)
