@@ -20,3 +20,6 @@ class grid(object):
         self.showGrid = showGrid  # If we should show the black outline
         self.isSelected = None
         self.grid = None
+
+        self.screen = win
+        pygame.display.update()
