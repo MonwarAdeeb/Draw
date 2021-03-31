@@ -23,3 +23,6 @@ class grid(object):
 
         self.screen = win
         pygame.display.update()
+
+    def getGrid(self):
+        return self.grid  # Return the grid list
