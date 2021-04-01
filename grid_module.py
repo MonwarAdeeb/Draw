@@ -31,3 +31,12 @@ class grid(object):
     def drawGrid(self, lineColor=(0, 0, 0)):
         x = self.startx
         y = self.starty
+
+        for i in range(self.cols):
+            y = self.starty + self.height
+            if i > 0:
+                x += (self.width / self.cols)
+            for j in range(self.rows):
+                y -= self.height / self.rows
+                pygame.draw.rect(
+                    self.screen, (0, 0, 0), (x, y, self.width / self.cols, self.height / self.rows), 1)
