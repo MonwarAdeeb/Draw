@@ -26,3 +26,8 @@ class grid(object):
 
     def getGrid(self):
         return self.grid  # Return the grid list
+
+    # This will draw the lines to create the grid, this is done so by simply creating overlapping boxes
+    def drawGrid(self, lineColor=(0, 0, 0)):
+        x = self.startx
+        y = self.starty
