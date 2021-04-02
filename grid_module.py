@@ -54,3 +54,6 @@ class grid(object):
 
         except IndexError:  # If we run into an index error that means that the user did not click on a position in the grid
             return False
+
+    def isSelected(self):  # Return the currently selected object
+        return self.selected
