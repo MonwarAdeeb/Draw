@@ -47,3 +47,10 @@ class grid(object):
             w = pos[1]
             g1 = int((t - self.startx) / self.grid[0][0].w)
             g2 = int((w - self.starty) / self.grid[0][0].h)
+
+            self.selected = self.grid[g1][g2]
+
+            return self.grid[g1][g2]
+
+        except IndexError:  # If we run into an index error that means that the user did not click on a position in the grid
+            return False
