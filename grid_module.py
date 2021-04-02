@@ -40,3 +40,10 @@ class grid(object):
                 y -= self.height / self.rows
                 pygame.draw.rect(
                     self.screen, (0, 0, 0), (x, y, self.width / self.cols, self.height / self.rows), 1)
+
+    def clicked(self, pos):  # Return the position in the grid that user clicked on
+        try:
+            t = pos[0]
+            w = pos[1]
+            g1 = int((t - self.startx) / self.grid[0][0].w)
+            g2 = int((w - self.starty) / self.grid[0][0].h)
