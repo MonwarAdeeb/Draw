@@ -57,3 +57,13 @@ class grid(object):
 
     def isSelected(self):  # Return the currently selected object
         return self.selected
+
+
+# This is the concrete class used to draw pixels in a grid
+# The draw grid function in this class uses polymorphism to create a grid
+# full of pixel objects. It still contains the methods from the aboce class
+# has its own specific clearGrid(). Using ____.clearGrid() will simply set the color
+# to the original background color.
+class pixelArt(grid):
+    def drawGrid(self):
+        self.grid = []
