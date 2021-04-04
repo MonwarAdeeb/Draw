@@ -67,3 +67,6 @@ class grid(object):
 class pixelArt(grid):
     def drawGrid(self):
         self.grid = []
+        # Create pixels in the grid
+        for i in range(self.cols):
+            self.grid.append([])
