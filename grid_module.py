@@ -70,3 +70,11 @@ class pixelArt(grid):
         # Create pixels in the grid
         for i in range(self.cols):
             self.grid.append([])
+            for j in range(self.rows):
+                self.grid[i].append(pixel(i, j, self.width, self.height, self.cols,
+                                          self.rows, self.startx, self.starty, self.showGrid))
+                self.grid[i][j].show(
+                    self.screen, (255, 255, 255), self.lineThick)
+                if self.showGrid:
+                    self.grid[i][j].show(
+                        self.screen, (0, 0, 0), 1, False, True)
