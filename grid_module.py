@@ -83,3 +83,5 @@ class pixelArt(grid):
         for c in range(self.cols):
             for r in range(self.rows):
                 self.grid[c][r].getNeighbors(self.grid)
+
+        self.selected = self.grid[self.cols - 1][self.rows - 1]
