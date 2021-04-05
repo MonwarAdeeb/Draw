@@ -85,3 +85,12 @@ class pixelArt(grid):
                 self.grid[c][r].getNeighbors(self.grid)
 
         self.selected = self.grid[self.cols - 1][self.rows - 1]
+
+    def clearGrid(self):  # This will set all of the pixels to the same color as the background color
+        for pixels in self.grid:
+            for p in pixels:
+                if self.showGrid:  # If the grid is to be showing we must redraw the pixels so that we can see the grid after we change their color
+                    p.show(self.screen, self.bg, 0)
+                    p.show(self.screen, (0, 0, 0), 1)
+                else:
+                    p.show(self.screen, self.bg, 0)
