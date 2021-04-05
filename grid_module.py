@@ -78,3 +78,8 @@ class pixelArt(grid):
                 if self.showGrid:
                     self.grid[i][j].show(
                         self.screen, (0, 0, 0), 1, False, True)
+
+        # This generates the neighbours of each pixel so that we can draw multiple thickness of lines
+        for c in range(self.cols):
+            for r in range(self.rows):
+                self.grid[c][r].getNeighbors(self.grid)
