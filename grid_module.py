@@ -103,3 +103,6 @@ class colorPallet(pixelArt):
     # The colorList argument passed to the function must be equal to the number of pixels in the grid
     def setColor(self, colorList):
         colourCount = 0
+            for p in pixels:
+                p.show(self.screen, colorList[colourCount], 0)
+                colourCount += 1
