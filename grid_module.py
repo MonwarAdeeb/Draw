@@ -118,4 +118,3 @@ class menu(grid):
     def setText(self, textList):
 
         self.grid = []
-        # Create textObjects in the grid
