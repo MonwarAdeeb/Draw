@@ -116,3 +116,6 @@ class colorPallet(pixelArt):
 class menu(grid):
     # The textList argument passed must be equal to the number of spots in the grid
     def setText(self, textList):
+
+        self.grid = []
+        # Create textObjects in the grid
