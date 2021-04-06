@@ -94,3 +94,12 @@ class pixelArt(grid):
                     p.show(self.screen, (0, 0, 0), 1)
                 else:
                     p.show(self.screen, self.bg, 0)
+
+
+# This class is responsible for creating the color pallet in the bottom left hand side of the screen
+# and is a concrete class. The setColor() method simply takes a list of colors and assigns them to pixels
+# in the grid. This can only be called after the grid has been created.
+class colorPallet(pixelArt):
+    # The colorList argument passed to the function must be equal to the number of pixels in the grid
+    def setColor(self, colorList):
+        colourCount = 0
