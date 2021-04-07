@@ -118,3 +118,9 @@ class menu(grid):
     def setText(self, textList):
 
         self.grid = []
+        # Create textObjects in the grid
+        for i in range(self.cols):
+            self.grid.append([])
+            for j in range(self.rows):
+                self.grid[i].append(textObject(
+                    i, j, self.width, self.height, self.cols, self.rows, self.startx, self.starty))
