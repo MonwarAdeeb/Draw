@@ -124,3 +124,9 @@ class menu(grid):
             for j in range(self.rows):
                 self.grid[i].append(textObject(
                     i, j, self.width, self.height, self.cols, self.rows, self.startx, self.starty))
+        # Set the text for each of those objects
+        c = 0
+        for spots in self.getGrid():
+            for s in spots:
+                s.showText(self.screen, textList[c])
+                c += 1
