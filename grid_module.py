@@ -130,3 +130,18 @@ class menu(grid):
             for s in spots:
                 s.showText(self.screen, textList[c])
                 c += 1
+
+
+# This class is responsible for displaying text and these objects are added into the grid.
+# The showText() method will display the text while the show() method will draw a square showing thr grid.
+class textObject():
+    def __init__(self, i, j, width, height, cols, rows, startx=0, starty=0):
+        self.col = i  # The column of the current instance in the grid
+        self.row = j  # The row of the current instance in the grid
+        self.rows = rows  # Total amount of rows
+        self.cols = cols  # Total amount of columns
+        self.w = width / cols
+        self.h = height / rows
+        self.x = self.col * self.w + startx
+        self.y = self.row * self.h + starty
+        self.text = ''
