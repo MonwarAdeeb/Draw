@@ -145,3 +145,11 @@ class textObject():
         self.x = self.col * self.w + startx
         self.y = self.row * self.h + starty
         self.text = ''
+
+    def showText(self, win, txt):  # This will render and draw the text on the screen
+        self.text = txt
+        myFont = pygame.font.SysFont('comicsansms', 15)
+        text = myFont.render(self.text, 1, (0, 0, 0))
+        # This will make sure the text is center in the screen.
+        win.blit(text, (self.x + (self.w / 2 - text.get_width() / 2),
+                        self.y + (self.h/2 - text.get_height() / 2)))
