@@ -153,3 +153,7 @@ class textObject():
         # This will make sure the text is center in the screen.
         win.blit(text, (self.x + (self.w / 2 - text.get_width() / 2),
                         self.y + (self.h/2 - text.get_height() / 2)))
+
+    # Draws a square displaying the area in the grid
+    def show(self, screen, color, st, outline=False):
+        pygame.draw.rect(screen, color, (self.x, self.y, self.w, self.h), st)
