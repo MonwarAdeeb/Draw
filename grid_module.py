@@ -157,3 +157,20 @@ class textObject():
     # Draws a square displaying the area in the grid
     def show(self, screen, color, st, outline=False):
         pygame.draw.rect(screen, color, (self.x, self.y, self.w, self.h), st)
+
+
+# This pixel object is responsible for stroing a color and displaying it to the screen. These objects are added into the grid.
+# The methods are named according to what they do.
+class pixel():
+    def __init__(self, i, j, width, height, cols, rows, startx=0, starty=0, showGrid=False):
+        self.col = i  # The column of the current instance
+        self.row = j  # The row of the current instance
+        self.color = (255, 255, 255)
+        self.rows = rows  # Amount of rows in whole grid
+        self.cols = cols  # Amount of cols in whole grid
+        self.showGrid = showGrid
+        self.w = width / cols
+        self.h = height / rows
+        self.x = self.col * self.w + startx
+        self.y = self.row * self.h + starty
+        self.neighbors = []
