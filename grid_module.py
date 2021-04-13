@@ -174,3 +174,7 @@ class pixel():
         self.x = self.col * self.w + startx
         self.y = self.row * self.h + starty
         self.neighbors = []
+
+    def show(self, screen, color, st, outline=False, first=False):  # Display the current pixel
+        if not(first):
+            self.color = color
