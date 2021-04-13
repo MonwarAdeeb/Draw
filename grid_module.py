@@ -183,3 +183,7 @@ class pixel():
         if self.showGrid and not(outline):
             pygame.draw.rect(screen, (0, 0, 0),
                              (self.x, self.y, self.w, self.h), 1)
+
+    def getPos(self):
+        # Return a tuple (x,y) of the top left co-ords of the pixel
+        return (self.col * self.w, self.row * self.h)
