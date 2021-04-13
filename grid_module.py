@@ -178,3 +178,8 @@ class pixel():
     def show(self, screen, color, st, outline=False, first=False):  # Display the current pixel
         if not(first):
             self.color = color
+
+        pygame.draw.rect(screen, color, (self.x, self.y, self.w, self.h), st)
+        if self.showGrid and not(outline):
+            pygame.draw.rect(screen, (0, 0, 0),
+                             (self.x, self.y, self.w, self.h), 1)
