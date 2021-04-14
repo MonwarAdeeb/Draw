@@ -187,3 +187,7 @@ class pixel():
     def getPos(self):
         # Return a tuple (x,y) of the top left co-ords of the pixel
         return (self.col * self.w, self.row * self.h)
+
+    def click(self, screen, color):  # If the pixel has been clicked on call this and it will display the new color and set the color attribute for that pixel
+        self.show(screen, color, 0)
+        self.color = color
