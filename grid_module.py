@@ -191,3 +191,6 @@ class pixel():
     def click(self, screen, color):  # If the pixel has been clicked on call this and it will display the new color and set the color attribute for that pixel
         self.show(screen, color, 0)
         self.color = color
+
+    def getColor(self):
+        return self.color
