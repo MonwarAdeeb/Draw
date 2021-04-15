@@ -194,3 +194,10 @@ class pixel():
 
     def getColor(self):
         return self.color
+
+    def getNeighbors(self, grid):
+        # Get the neighbours of each pixel in the grid, this is used for drawing thicker lines
+        i = self.col  # the var i is responsible for denoting the current col value in the grid
+        j = self.row  # the var j is responsible for denoting the current row value in the grid
+        rows = self.rows
+        cols = self.cols
