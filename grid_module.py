@@ -201,3 +201,13 @@ class pixel():
         j = self.row  # the var j is responsible for denoting the current row value in the grid
         rows = self.rows
         cols = self.cols
+
+        # Horizontal and vertical neighbors
+        if i < cols-1:  # Right
+            self.neighbors.append(grid[i + 1][j])
+        if i > 0:  # Left
+            self.neighbors.append(grid[i - 1][j])
+        if j < rows-1:  # Up
+            self.neighbors.append(grid[i][j + 1])
+        if j > 0:  # Down
+            self.neighbors.append(grid[i][j - 1])
