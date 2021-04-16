@@ -211,3 +211,16 @@ class pixel():
             self.neighbors.append(grid[i][j + 1])
         if j > 0:  # Down
             self.neighbors.append(grid[i][j - 1])
+
+        # Diagonal neighbors
+        if j > 0 and i > 0:  # Top Left
+            self.neighbors.append(grid[i - 1][j - 1])
+
+        if j + 1 < rows and i > -1 and i - 1 > 0:  # Bottom Left
+            self.neighbors.append(grid[i - 1][j + 1])
+
+        if j - 1 < rows and i < cols - 1 and j - 1 > 0:  # Top Right
+            self.neighbors.append(grid[i + 1][j - 1])
+
+        if j < rows - 1 and i < cols - 1:  # Bottom Right
+            self.neighbors.append(grid[i + 1][j + 1])
