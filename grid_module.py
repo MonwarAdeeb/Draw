@@ -224,3 +224,6 @@ class pixel():
 
         if j < rows - 1 and i < cols - 1:  # Bottom Right
             self.neighbors.append(grid[i + 1][j + 1])
+
+    def neighborsReturn(self):
+        return self.neighbors  # Return a list of the neighbours of the current pixel
