@@ -13,3 +13,9 @@ from grid_module import menu
 from grid_module import grid
 import sys
 import time
+
+sys.setrecursionlimit(1000000)
+
+pygame.init()  # initalize pygame
+paintBrush = pygame.image.load("Paintbrush.png")
+currentVersion = 1.1
