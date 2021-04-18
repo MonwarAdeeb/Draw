@@ -19,3 +19,11 @@ sys.setrecursionlimit(1000000)
 pygame.init()  # initalize pygame
 paintBrush = pygame.image.load("Paintbrush.png")
 currentVersion = 1.1
+
+# Set defaults for our screen size and rows and columns
+rows = 50
+cols = 50
+wid = 600
+heigh = 600
+
+checked = []
