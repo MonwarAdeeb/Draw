@@ -48,3 +48,12 @@ def fill(spot, grid, color, c):
             fill(grid.getGrid()[i][j + 1], grid, color, c)
         if j > 0:  # Down
             fill(grid.getGrid()[i][j - 1], grid, color, c)
+
+
+# Saves the current project into a text file that contains the size of the screen, if the gird is showing and all the colors of all the pixels
+def save(cols, rows, show, grid, path):
+    if len(path) >= 4:  # This just makes sure we have .txt at the end of our file selection
+        if path[-4:] != '.txt':
+            path = path + '.txt'
+    else:
+        path = path + '.txt'
