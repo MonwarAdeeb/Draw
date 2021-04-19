@@ -27,3 +27,24 @@ wid = 600
 heigh = 600
 
 checked = []
+
+
+def fill(spot, grid, color, c):
+    if spot.color != c:
+        pass
+    else:
+        spot.click(grid.screen, color)
+        pygame.display.update()
+
+        i = spot.col  # the var i is responsible for denoting the current col value in the grid
+        j = spot.row  # the var j is responsible for denoting the current row value in the grid
+
+        # Horizontal and vertical neighbors
+        if i < cols-1:  # Right
+            fill(grid.getGrid()[i + 1][j], grid, color, c)
+        if i > 0:  # Left
+            fill(grid.getGrid()[i - 1][j], grid, color, c)
+        if j < rows-1:  # Up
+            fill(grid.getGrid()[i][j + 1], grid, color, c)
+        if j > 0:  # Down
+            fill(grid.getGrid()[i][j - 1], grid, color, c)
