@@ -61,3 +61,10 @@ def save(cols, rows, show, grid, path):
     # Overwrite the current file, or if it doesn't exist create a new one
     file = open(path, 'w')
     file.write(str(cols) + ' ' + str(rows) + ' ' + str(show) + '\n')
+
+    for pixel in grid:
+        for p in pixel:  # For every pixel write the color in the text file
+            wr = str(p.color[0]) + ',' + \
+                str(p.color[1]) + ',' + str(p.color[2])
+            file.write(wr + '\n')
+    file.write(str(currentVersion))
