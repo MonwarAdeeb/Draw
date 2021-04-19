@@ -72,3 +72,6 @@ def save(cols, rows, show, grid, path):
     file.close()
     name = path.split("/")
     changeCaption(name[-1])
+# Opens the file from the given path and displays it to the screen
+def openFile(path):
+    global grid
