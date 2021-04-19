@@ -68,3 +68,7 @@ def save(cols, rows, show, grid, path):
                 str(p.color[1]) + ',' + str(p.color[2])
             file.write(wr + '\n')
     file.write(str(currentVersion))
+
+    file.close()
+    name = path.split("/")
+    changeCaption(name[-1])
