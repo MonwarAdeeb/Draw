@@ -57,3 +57,7 @@ def save(cols, rows, show, grid, path):
             path = path + '.txt'
     else:
         path = path + '.txt'
+
+    # Overwrite the current file, or if it doesn't exist create a new one
+    file = open(path, 'w')
+    file.write(str(cols) + ' ' + str(rows) + ' ' + str(show) + '\n')
