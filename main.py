@@ -81,3 +81,7 @@ def openFile(path):
     file = open(path, 'r')
     f = file.readlines()
     if f[-1] == str(currentVersion):
+
+        dimensions = f[0].split()  # Dimesnions for the rows and cols
+        columns = int(dimensions[0])
+        rows = int(dimensions[1])
