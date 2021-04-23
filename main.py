@@ -95,3 +95,11 @@ def openFile(path):
         initalize(columns, rows, v)
         name = path.split("/")
         changeCaption(name[-1])
+
+        line = 0
+        for i in range(columns):  # For every pixel, read the color and format it into a tuple
+            for j in range(rows):
+                line += 1
+                nColor = []
+                for char in f[line].strip().split(','):
+                    nColor.append(int(char))
