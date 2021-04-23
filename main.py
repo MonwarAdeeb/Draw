@@ -85,3 +85,13 @@ def openFile(path):
         dimensions = f[0].split()  # Dimesnions for the rows and cols
         columns = int(dimensions[0])
         rows = int(dimensions[1])
+
+        # If the show grid attribute at the end of our dimensions line is 0 then don't show grid
+        if dimensions[2] == '0':
+            v = False
+        else:
+            v = True
+        # Redraw the grid, tool bars, menu bars etc.
+        initalize(columns, rows, v)
+        name = path.split("/")
+        changeCaption(name[-1])
