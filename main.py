@@ -103,3 +103,6 @@ def openFile(path):
                 nColor = []
                 for char in f[line].strip().split(','):
                     nColor.append(int(char))
+
+                # Show the color on the grid
+                grid.getGrid()[i][j].show(win, tuple(nColor), 0)
