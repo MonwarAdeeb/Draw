@@ -106,3 +106,8 @@ def openFile(path):
 
                 # Show the color on the grid
                 grid.getGrid()[i][j].show(win, tuple(nColor), 0)
+    else:
+        window = Tk()
+        window.withdraw()
+        messagebox.showerror(
+            "Unsupported Version", "The file you have opened is created using a previous version of this program. Please open it in that version.")
