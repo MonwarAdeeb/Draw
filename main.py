@@ -111,3 +111,8 @@ def openFile(path):
         window.withdraw()
         messagebox.showerror(
             "Unsupported Version", "The file you have opened is created using a previous version of this program. Please open it in that version.")
+
+
+# Change pygame caption
+def changeCaption(txt):
+    pygame.display.set_caption(txt)
