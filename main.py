@@ -125,3 +125,13 @@ def showFileNav(op=False):
     window.attributes("-topmost", True)
     window.withdraw()
     myFormats = [('Windows Text File', '*.txt')]
+    if op:
+        # Ask the user which file they want to open
+        filename = askopenfilename(title="Open File", filetypes=myFormats)
+    else:
+        # Ask the user choose a path to save their file to
+        filename = asksaveasfilename(title="Save File", filetypes=myFormats)
+
+    if filename:  # If the user seletced something
+        x = filename[:]  # Make a copy
+        return x
