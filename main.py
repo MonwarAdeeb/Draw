@@ -116,3 +116,12 @@ def openFile(path):
 # Change pygame caption
 def changeCaption(txt):
     pygame.display.set_caption(txt)
+
+
+# This shows the file navigator for opening and saving files
+def showFileNav(op=False):
+    # Op is short form for open as open is a key word
+    window = Tk()
+    window.attributes("-topmost", True)
+    window.withdraw()
+    myFormats = [('Windows Text File', '*.txt')]
