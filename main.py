@@ -145,3 +145,11 @@ def onsubmit(x=0):
     st = rowsCols.get().split(',')  # Get the input from the text box
     window.quit()
     window.destroy()
+    try:  # Make sure both cols and rows are integers
+        if st[0].isdigit():
+            cols = int(st[0])
+            while 600//cols != 600/cols:
+                if cols < 300:
+                    cols += 1
+                else:
+                    cols -= 1
