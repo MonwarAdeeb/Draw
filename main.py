@@ -141,3 +141,7 @@ def showFileNav(op=False):
 
 def onsubmit(x=0):
     global cols, rows, wid, heigh
+
+    st = rowsCols.get().split(',')  # Get the input from the text box
+    window.quit()
+    window.destroy()
