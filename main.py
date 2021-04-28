@@ -135,3 +135,9 @@ def showFileNav(op=False):
     if filename:  # If the user seletced something
         x = filename[:]  # Make a copy
         return x
+
+# Onsubmit function for tkinter form for choosing pixel size
+
+
+def onsubmit(x=0):
+    global cols, rows, wid, heigh
