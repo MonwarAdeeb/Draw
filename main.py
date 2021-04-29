@@ -164,3 +164,6 @@ def onsubmit(x=0):
             cols = 300
         if rows > 300:
             rows = 300
+
+    except:
+        pass
