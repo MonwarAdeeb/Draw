@@ -160,3 +160,7 @@ def onsubmit(x=0):
                     rows += 1
                 else:
                     rows -= 1
+        if cols > 300:
+            cols = 300
+        if rows > 300:
+            rows = 300
