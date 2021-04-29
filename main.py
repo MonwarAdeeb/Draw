@@ -153,3 +153,10 @@ def onsubmit(x=0):
                     cols += 1
                 else:
                     cols -= 1
+        if st[1].isdigit():
+            rows = int(st[1])
+            while 600//rows != 600/rows:
+                if rows < 300:
+                    rows += 1
+                else:
+                    rows -= 1
