@@ -167,3 +167,11 @@ def onsubmit(x=0):
 
     except:
         pass
+
+# Update the lbale which shows the pixel size by getting input on rows and cols
+
+
+def updateLabel(a, b, c):
+    sizePixel = rowsCols.get().split(',')  # Get the contents of the label
+    l = 12
+    w = 12
