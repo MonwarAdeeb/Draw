@@ -175,3 +175,16 @@ def updateLabel(a, b, c):
     sizePixel = rowsCols.get().split(',')  # Get the contents of the label
     l = 12
     w = 12
+
+    try:
+        l = 600/int(sizePixel[0])
+    except:
+        pass
+
+    try:
+        w = 600/(int(sizePixel[1]))
+    except:
+        pass
+
+    label1.config(text='Pixel Size: ' + str(l) + ', ' +
+                  str(w))  # Change label to show pixel size
