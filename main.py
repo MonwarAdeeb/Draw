@@ -193,3 +193,9 @@ def updateLabel(a, b, c):
 # CREATE SCREEN
 def initalize(cols, rows, showGrid=False):
     global pallet, grid, win, tools, lineThickness, saveMenu
+
+    # if grid already exsists delete it then recreate it
+    try:
+        del grid
+    except:
+        pass
