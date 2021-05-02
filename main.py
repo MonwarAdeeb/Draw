@@ -188,3 +188,8 @@ def updateLabel(a, b, c):
 
     label1.config(text='Pixel Size: ' + str(l) + ', ' +
                   str(w))  # Change label to show pixel size
+
+
+# CREATE SCREEN
+def initalize(cols, rows, showGrid=False):
+    global pallet, grid, win, tools, lineThickness, saveMenu
