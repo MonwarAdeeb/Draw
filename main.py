@@ -199,3 +199,8 @@ def initalize(cols, rows, showGrid=False):
         del grid
     except:
         pass
+
+    pygame.display.set_icon(paintBrush)
+    win = pygame.display.set_mode((int(wid), int(heigh) + 100))
+    pygame.display.set_caption('Untitled')
+    win.fill((255, 255, 255))
