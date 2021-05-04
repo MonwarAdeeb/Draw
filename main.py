@@ -222,3 +222,6 @@ def initalize(cols, rows, showGrid=False):
     buttons = ['D', 'E', 'F', 'R', 'C']
     tools.setText(buttons)
     tools.drawGrid()
+
+    l = tools.getGrid()
+    l[0][0].show(grid.screen, (255, 0, 0), 1, True)
