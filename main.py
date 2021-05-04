@@ -204,3 +204,7 @@ def initalize(cols, rows, showGrid=False):
     win = pygame.display.set_mode((int(wid), int(heigh) + 100))
     pygame.display.set_caption('Untitled')
     win.fill((255, 255, 255))
+
+    # CREATION OF OBJECTS
+    grid = pixelArt(win, int(wid), int(heigh), cols, rows, showGrid)
+    grid.drawGrid()
