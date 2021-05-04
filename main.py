@@ -208,3 +208,6 @@ def initalize(cols, rows, showGrid=False):
     # CREATION OF OBJECTS
     grid = pixelArt(win, int(wid), int(heigh), cols, rows, showGrid)
     grid.drawGrid()
+
+    pallet = colorPallet(win, 90, 90, 3, 3, True, 10, grid.height + 2)
+    pallet.drawGrid()
