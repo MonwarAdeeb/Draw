@@ -215,3 +215,6 @@ def initalize(cols, rows, showGrid=False):
     colorList = [(0, 0, 0), (255, 255, 255), (255, 0, 0), (0, 255, 0), (0,
                                                                         0, 255), (255, 255, 0), (255, 168, 0), (244, 66, 173), (65, 244, 226)]
     pallet.setColor(colorList)
+
+    tools = menu(win, 200, 40, 5, 1, True, grid.width - 210, grid.height + 50)
+    tools.drawGrid()
