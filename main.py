@@ -218,3 +218,7 @@ def initalize(cols, rows, showGrid=False):
 
     tools = menu(win, 200, 40, 5, 1, True, grid.width - 210, grid.height + 50)
     tools.drawGrid()
+
+    buttons = ['D', 'E', 'F', 'R', 'C']
+    tools.setText(buttons)
+    tools.drawGrid()
