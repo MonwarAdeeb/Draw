@@ -225,3 +225,7 @@ def initalize(cols, rows, showGrid=False):
 
     l = tools.getGrid()
     l[0][0].show(grid.screen, (255, 0, 0), 1, True)
+
+    lineThickness = menu(win, 180, 40, 4, 1, True,
+                         grid.width - 200, grid.height + 10)
+    lineThickness.drawGrid()
