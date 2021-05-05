@@ -231,4 +231,8 @@ def initalize(cols, rows, showGrid=False):
     lineThickness.drawGrid()
 
     buttons = ['1', '2', '3', '4']
-    lineThickness.setText(buttons
+    lineThickness.setText(buttons)
+
+    saveMenu = menu(win, 140, 40, 2, 1, True,
+                    grid.width - 400, grid.height + 25)
+    saveMenu.drawGrid()
