@@ -236,3 +236,6 @@ def initalize(cols, rows, showGrid=False):
     saveMenu = menu(win, 140, 40, 2, 1, True,
                     grid.width - 400, grid.height + 25)
     saveMenu.drawGrid()
+
+    buttons = ['Save', 'Open']
+    saveMenu.setText(buttons)
