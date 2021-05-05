@@ -239,3 +239,5 @@ def initalize(cols, rows, showGrid=False):
 
     buttons = ['Save', 'Open']
     saveMenu.setText(buttons)
+
+    pygame.display.update()
