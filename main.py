@@ -241,3 +241,9 @@ def initalize(cols, rows, showGrid=False):
     saveMenu.setText(buttons)
 
     pygame.display.update()
+
+
+#-----------------------------------------------------------------------#
+    #TKINTER FORM FOR GETTING INPUT#
+window = Tk()
+window.title('Paint Program')
