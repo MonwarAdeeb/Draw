@@ -247,3 +247,6 @@ def initalize(cols, rows, showGrid=False):
     #TKINTER FORM FOR GETTING INPUT#
 window = Tk()
 window.title('Paint Program')
+
+t_var = StringVar()
+t_var.trace('w', updateLabel)
