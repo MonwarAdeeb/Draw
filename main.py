@@ -253,3 +253,9 @@ t_var.trace('w', updateLabel)
 
 label = Label(window, text='# Of Rows and Columns (25,50): ')
 rowsCols = Entry(window, textvariable=t_var)
+
+label1 = Label(window, text="Pixel Size: 12.0, 12.0")
+var = IntVar()
+c = Checkbutton(window, text="View Grid", variable=var)
+submit = Button(window, text='Submit', command=onsubmit)
+window.bind('<Return>', onsubmit)
