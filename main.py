@@ -265,3 +265,8 @@ c.grid(column=0, row=3)
 label1.grid(row=2)
 rowsCols.grid(row=0, column=1, pady=3, padx=8)
 label.grid(row=0, pady=3)
+
+window.update()
+mainloop()
+
+#------------------------------------------------------------------------#
