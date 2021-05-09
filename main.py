@@ -270,3 +270,13 @@ window.update()
 mainloop()
 
 #------------------------------------------------------------------------#
+
+
+# MAIN LOOP
+initalize(cols, rows, var.get())
+pygame.display.update()
+color = (0, 0, 0)  # Current drawing color
+thickness = 1
+replace = False
+doFill = False
+savedPath = ''  # Current path of file
