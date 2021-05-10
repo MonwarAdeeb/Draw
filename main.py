@@ -280,3 +280,8 @@ thickness = 1
 replace = False
 doFill = False
 savedPath = ''  # Current path of file
+
+run = True
+while run:
+    # Main loop for mouse collision
+    ev = pygame.event.get()
