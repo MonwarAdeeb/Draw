@@ -285,3 +285,22 @@ run = True
 while run:
     # Main loop for mouse collision
     ev = pygame.event.get()
+
+    for event in ev:
+        if event.type == pygame.QUIT:
+            window = Tk()
+            window.withdraw()
+            # Ask the user if they want to save before closing
+            if pygame.display.get_caption()[0].count('*') > 0:
+                if messagebox.askyesno("Save Work?", "Would you like to save before closing?"):
+                    # If they have already saved the file simply save to that path otherwise they need to chose a location
+                    if savedPath != "":
+                        save(cols, rows, grid.showGrid,
+                             grid.getGrid(), savedPath)
+                    else:
+                        path = showFileNav()
+                        if path:
+                            savedPath = path
+                            save(cols, rows, grid.showGrid,
+                                 grid.getGrid(), savedPath)
+            run = False
