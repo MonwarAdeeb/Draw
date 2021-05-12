@@ -304,3 +304,19 @@ while run:
                             save(cols, rows, grid.showGrid,
                                  grid.getGrid(), savedPath)
             run = False
+
+        # See if the user has clicked or dragged their mouse
+        if pygame.mouse.get_pressed()[0]:
+            try:
+                pos = pygame.mouse.get_pos()
+                if pos[1] >= grid.height:  # If the mouse is below the main drawing grid
+                    # If the mouse ic clicking on the tools grid
+                    if pos[0] >= tools.startx and pos[0] <= tools.startx + tools.width and pos[1] >= tools.starty and pos[1] < + tools.starty + tools.height:
+                        replace = False
+                        doFill = False
+                        tools.drawGrid()  # Redraw the grid so that we dont see the red highlight
+                        buttons = ['D', 'E', 'F', 'R', 'C']
+                        tools.setText(buttons)
+
+                        clicked = tools.clicked(pos)
+                        clicked.show(grid.screen, (255, 0, 0), 1, True)
