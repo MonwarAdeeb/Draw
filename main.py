@@ -320,3 +320,20 @@ while run:
 
                         clicked = tools.clicked(pos)
                         clicked.show(grid.screen, (255, 0, 0), 1, True)
+
+                        # Depending what tool they click
+                        if clicked.text == 'D':  # Draw tool
+                            color = (0, 0, 0)
+                        elif clicked.text == 'E':  # Erase tool
+                            color = (255, 255, 255)
+                        elif clicked.text == 'F':  # Fill tool
+                            doFill = True
+                        elif clicked.text == 'R':  # Replace tool
+                            replace = True
+                        elif clicked.text == 'C':  # Clear grid tool
+                            grid.clearGrid()
+                            tools.drawGrid()  # Redraw the grid so that we dont see the red highlight
+                            buttons = ['D', 'E', 'F', 'R', 'C']
+                            tools.setText(buttons)
+                            l = tools.getGrid()
+                            l[0][0].show(grid.screen, (255, 0, 0), 1, True)
