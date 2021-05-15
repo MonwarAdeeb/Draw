@@ -342,3 +342,7 @@ while run:
                     elif pos[0] >= pallet.startx and pos[0] <= pallet.startx + pallet.width and pos[1] >= pallet.starty and pos[1] <= pallet.starty + pallet.height:
                         clicked = pallet.clicked(pos)
                         color = clicked.getColor()  # Set current drawing color
+
+                        pallet = colorPallet(
+                            win, 90, 90, 3, 3, True, 10, grid.height + 2)
+                        pallet.drawGrid()
