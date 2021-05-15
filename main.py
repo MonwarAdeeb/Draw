@@ -346,3 +346,6 @@ while run:
                         pallet = colorPallet(
                             win, 90, 90, 3, 3, True, 10, grid.height + 2)
                         pallet.drawGrid()
+
+                        colorList = [(0, 0, 0), (255, 255, 255), (255, 0, 0), (0, 255, 0), (
+                            0, 0, 255), (255, 255, 0), (255, 168, 0), (244, 66, 173), (65, 244, 226)]
