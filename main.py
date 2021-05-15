@@ -349,3 +349,5 @@ while run:
 
                         colorList = [(0, 0, 0), (255, 255, 255), (255, 0, 0), (0, 255, 0), (
                             0, 0, 255), (255, 255, 0), (255, 168, 0), (244, 66, 173), (65, 244, 226)]
+                        pallet.setColor(colorList)
+                        clicked.show(grid.screen, (255, 0, 0), 3, True)
