@@ -337,3 +337,8 @@ while run:
                             tools.setText(buttons)
                             l = tools.getGrid()
                             l[0][0].show(grid.screen, (255, 0, 0), 1, True)
+
+                    # If they click on the color pallet
+                    elif pos[0] >= pallet.startx and pos[0] <= pallet.startx + pallet.width and pos[1] >= pallet.starty and pos[1] <= pallet.starty + pallet.height:
+                        clicked = pallet.clicked(pos)
+                        color = clicked.getColor()  # Set current drawing color
