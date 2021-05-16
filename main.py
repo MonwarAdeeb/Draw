@@ -361,3 +361,7 @@ while run:
                         clicked.show(grid.screen, (255, 0, 0), 1, True)
 
                         thickness = int(clicked.text)  # set line thickness
+
+                    # If they click on the save menu
+                    elif pos[0] >= saveMenu.startx and pos[0] <= saveMenu.startx + saveMenu.width and pos[1] >= saveMenu.starty and pos[1] <= saveMenu.starty + saveMenu.height:
+                        clicked = saveMenu.clicked(pos)
