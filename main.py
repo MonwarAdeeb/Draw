@@ -365,3 +365,6 @@ while run:
                     # If they click on the save menu
                     elif pos[0] >= saveMenu.startx and pos[0] <= saveMenu.startx + saveMenu.width and pos[1] >= saveMenu.starty and pos[1] <= saveMenu.starty + saveMenu.height:
                         clicked = saveMenu.clicked(pos)
+
+                        if clicked.text == 'Save':  # save if they click save
+                            path = showFileNav()
