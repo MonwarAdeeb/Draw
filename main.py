@@ -356,3 +356,8 @@ while run:
                         lineThickness.drawGrid()  # Redraw the grid so that we dont see the red highlight
                         buttons = ['1', '2', '3', '4']
                         lineThickness.setText(buttons)
+
+                        clicked = lineThickness.clicked(pos)
+                        clicked.show(grid.screen, (255, 0, 0), 1, True)
+
+                        thickness = int(clicked.text)  # set line thickness
