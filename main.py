@@ -351,3 +351,8 @@ while run:
                             0, 0, 255), (255, 255, 0), (255, 168, 0), (244, 66, 173), (65, 244, 226)]
                         pallet.setColor(colorList)
                         clicked.show(grid.screen, (255, 0, 0), 3, True)
+
+                    elif pos[0] >= lineThickness.startx and pos[0] <= lineThickness.startx + lineThickness.width and pos[1] >= lineThickness.starty and pos[1] <= lineThickness.starty + lineThickness.height:
+                        lineThickness.drawGrid()  # Redraw the grid so that we dont see the red highlight
+                        buttons = ['1', '2', '3', '4']
+                        lineThickness.setText(buttons)
