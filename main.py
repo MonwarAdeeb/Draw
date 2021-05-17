@@ -368,3 +368,7 @@ while run:
 
                         if clicked.text == 'Save':  # save if they click save
                             path = showFileNav()
+                            if path:
+                                savedPath = path
+                                save(cols, rows, grid.showGrid,
+                                     grid.getGrid(), savedPath)
