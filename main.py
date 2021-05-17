@@ -392,6 +392,12 @@ while run:
                         c = clicked.color
                         replace = False
 
-                        for y in x:
-                            if y.color == c:
-                                y.click(grid.screen, color)
+                        for x in grid.getGrid():
+                            for y in x:
+                                if y.color == c:
+                                    y.click(grid.screen, color)
+                    elif doFill:
+                        clicked = grid.clicked(pos)
+                        if clicked.color != color:
+                            fill(clicked, grid, color, clicked.color)
+                            pygame.display.update()
