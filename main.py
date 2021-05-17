@@ -390,3 +390,6 @@ while run:
                         clicked = grid.clicked(pos)
                         c = clicked.color
                         replace = False
+                            for y in x:
+                                if y.color == c:
+                                    y.click(grid.screen, color)
