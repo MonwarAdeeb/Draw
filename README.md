@@ -5,3 +5,6 @@ A python program similar to Microsoft paint. It allows you to use a variety of d
 - Python 3.x
 - TKinter
 - Pygame
+
+# How to Run
+Run the 'main.py' file and start drawing!
