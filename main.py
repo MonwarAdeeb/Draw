@@ -372,3 +372,9 @@ while run:
                                 savedPath = path
                                 save(cols, rows, grid.showGrid,
                                      grid.getGrid(), savedPath)
+                        else:  # otherwise open
+                            path = showFileNav(True)
+                            if path:
+                                openFile(path)
+                                savedPath = path
+                               # open file
