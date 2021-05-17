@@ -378,6 +378,7 @@ while run:
                                 openFile(path)
                                 savedPath = path
                                # open file
+
                 else:
                     if replace:  # If we have the replace tool selected then replace the color
                         tools.drawGrid()  # Redraw the grid so that we dont see the red highlight
@@ -390,6 +391,7 @@ while run:
                         clicked = grid.clicked(pos)
                         c = clicked.color
                         replace = False
-                            for y in x:
-                                if y.color == c:
-                                    y.click(grid.screen, color)
+
+                        for y in x:
+                            if y.color == c:
+                                y.click(grid.screen, color)
