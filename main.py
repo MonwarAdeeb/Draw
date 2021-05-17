@@ -6,11 +6,11 @@ except:
 from tkinter import *
 from tkinter import messagebox
 from tkinter.filedialog import askopenfilename, asksaveasfilename
-import grid_module
-from grid_module import colorPallet
-from grid_module import pixelArt
-from grid_module import menu
-from grid_module import grid
+import gridModule
+from gridModule import colorPallet
+from gridModule import pixelArt
+from gridModule import menu
+from gridModule import grid
 import sys
 import time
 
@@ -424,3 +424,9 @@ while run:
                                     p.click(grid.screen, color)
                                     for x in p.neighbors:
                                         x.click(grid.screen, color)
+
+                pygame.display.update()
+            except AttributeError:
+                pass
+
+pygame.quit()
