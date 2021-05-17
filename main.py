@@ -383,3 +383,10 @@ while run:
                         tools.drawGrid()  # Redraw the grid so that we dont see the red highlight
                         buttons = ['D', 'E', 'F', 'R', 'C']
                         tools.setText(buttons)
+
+                        tools.getGrid()[0][0].show(
+                            grid.screen, (255, 0, 0), 1, True)
+
+                        clicked = grid.clicked(pos)
+                        c = clicked.color
+                        replace = False
