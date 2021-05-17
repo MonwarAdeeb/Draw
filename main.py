@@ -401,3 +401,8 @@ while run:
                         if clicked.color != color:
                             fill(clicked, grid, color, clicked.color)
                             pygame.display.update()
+
+                    else:  # otherwise draw the pixels accoding to the line thickness
+                        name = pygame.display.get_caption()[0]
+                        if name.find("*") < 1:
+                            changeCaption(name + '*')
