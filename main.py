@@ -378,3 +378,8 @@ while run:
                                 openFile(path)
                                 savedPath = path
                                # open file
+                else:
+                    if replace:  # If we have the replace tool selected then replace the color
+                        tools.drawGrid()  # Redraw the grid so that we dont see the red highlight
+                        buttons = ['D', 'E', 'F', 'R', 'C']
+                        tools.setText(buttons)
