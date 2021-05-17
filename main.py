@@ -417,3 +417,10 @@ while run:
                                 pixel.click(grid.screen, color)
                                 for p in pixel.neighbors:
                                     p.click(grid.screen, color)
+                        elif thickness == 4:
+                            for pixel in clicked.neighbors:
+                                pixel.click(grid.screen, color)
+                                for p in pixel.neighbors:
+                                    p.click(grid.screen, color)
+                                    for x in p.neighbors:
+                                        x.click(grid.screen, color)
