@@ -406,3 +406,14 @@ while run:
                         name = pygame.display.get_caption()[0]
                         if name.find("*") < 1:
                             changeCaption(name + '*')
+
+                        clicked = grid.clicked(pos)
+                        clicked.click(grid.screen, color)
+                        if thickness == 2:
+                            for pixel in clicked.neighbors:
+                                pixel.click(grid.screen, color)
+                        elif thickness == 3:
+                            for pixel in clicked.neighbors:
+                                pixel.click(grid.screen, color)
+                                for p in pixel.neighbors:
+                                    p.click(grid.screen, color)
